@@ -1,0 +1,65 @@
+{
+  "name": "boiler-plate-teste",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "keywords": [],
+  "author": "Alfredo Jose",
+  "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --progress --colors",
+    "build:dev": "rm -rf ./dist && cross-env NODE_ENV=development webpack --watch  --mode=development --progress --colors",
+    "build:prod": "rm -rf ./dist && cross-env NODE_ENV=production webpack  --mode=production --progress --colors"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "line-clamp": "^1.0.0",
+    "lodash": "^4.17.20",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "sweetalert2": "^10.0.2"
+  },
+  "devDependencies": {
+    "@babel/compat-data": "^7.11.0",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-transform-regenerator": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/polyfill": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@manz/pageload": "^1.0.2",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.1.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "ejs": "^3.1.5",
+    "ejs-webpack-loader": "^2.2.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "husky": "^4.3.0",
+    "image-webpack-loader": "^7.0.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "parallel-webpack": "^2.6.0",
+    "prettier": "^2.2.0",
+    "pretty-quick": "^3.1.0",
+    "render-template-loader": "^1.2.3",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
